@@ -11,12 +11,12 @@ module.exports = function(environment) {
     // Visit https://console.firebase.google.com/
     // Click on your app. Click on Overview. Click on "Add Firebase to your web app". Copy paste those keys.
     firebase: {
-      apiKey: 'UPDATE-THIS-TO-YOUR-OWN-API-KEY',
-      authDomain: 'UPDATE-THIS-TO-YOUR-OWN-FIREBASE-APP.firebaseapp.com',
-      databaseURL: 'https://UPDATE-THIS-TO-YOUR-OWN-FIREBASE-APP.firebaseio.com',
-      projectId: 'UPDATE-THIS-TO-YOUR-OWN-PROJECT-ID',
-      storageBucket: 'UPDATE-THIS-TO-YOUR-OWN-FIREBASE-APP.appspot.com',
-      messagingSenderId: 'UPDATE-THIS'
+      apiKey: 'AIzaSyAj2hzhRlcrJBZXDjCdmbuVdgoF37Y68pM',
+      authDomain: 'yo-ember-39630.firebaseapp.com',
+      databaseURL: 'https://yo-ember-39630.firebaseio.com',
+      projectId: 'yo-ember-39630',
+      storageBucket: '',
+      messagingSenderId: '396869276327'
     },
 
     // if using ember-cli-content-security-policy
