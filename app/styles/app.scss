@@ -50,3 +50,27 @@ th.wider {
 .extra-padding-bottom {
   padding-bottom: 20px;
 }
+
+.author__name {
+  &:hover {
+    cursor: pointer;
+    color: red;
+  }
+}
+
+.btn__add-author {
+    background-color: yellow;
+    border: 1px solid black;
+}
+
+.drop-into-box__container {
+    background-color: green;
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.drop-into-box__title {
+    text-align: center;
+    margin-bottom: 40px;
+}

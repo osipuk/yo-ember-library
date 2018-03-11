@@ -1,4 +1,4 @@
-<h1>Authors</h1>
+<!-- <h1>Authors</h1>
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -25,7 +25,7 @@
             </div>
           </form>
         {{else}}
-          <span {{action 'editAuthor' author}}>{{author.name}}</span>
+          <span class="author__name" {{action 'editAuthor' author}}>{{author.name}}</span>
         {{/if}}
       </td>
       <td>
@@ -38,4 +38,13 @@
     </tr>
   {{/each}}
   </tbody>
+
+
 </table>
+
+<div class="input-group">
+{{input value=authorName class='form-control'}}
+<div class="input-group-btn">
+  <button type="submit" class="btn btn-success" {{action 'addAuthor' authorName}}>Add new author</button>
+</div>
+</div> -->

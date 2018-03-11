@@ -8,7 +8,6 @@ export default Route.extend({
   },
 
   model(params) {
-
     if (params.limit === 'all') {
       return this.store.findAll('library');
     }

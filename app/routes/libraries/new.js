@@ -19,10 +19,6 @@ export default Route.extend({
 
   actions: {
 
-    saveLibrary(newLibrary) {
-      newLibrary.save().then(() => this.transitionTo('libraries'));
-    },
-
     willTransition() {
       // rollbackAttributes() removes the record from the store
       // if the model 'isNew'

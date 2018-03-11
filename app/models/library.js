@@ -5,10 +5,10 @@ import Faker from 'faker';
 export default DS.Model.extend({
 
   name: DS.attr('string'),
-  address: DS.attr('string'),
-  phone: DS.attr('string'),
+  // address: DS.attr('string'),
+  // phone: DS.attr('string'),
 
-  books: DS.hasMany('book', { inverse: 'library', async: true }),
+  // books: DS.hasMany('book', { inverse: 'library', async: true }),
 
   isValid: notEmpty('name'),
 
