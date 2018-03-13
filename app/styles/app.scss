@@ -11,6 +11,7 @@ html {
 
 .library-item {
   min-height: 150px;
+  text-align: center;
 }
 
 .label-fade {
@@ -64,7 +65,7 @@ th.wider {
 }
 
 .drop-into-box__container {
-    background-color: green;
+    background-color: dodgerblue;
     height: 200px;
     width: 200px;
     margin: 0 auto;
@@ -73,4 +74,37 @@ th.wider {
 .drop-into-box__title {
     text-align: center;
     margin-bottom: 40px;
+}
+
+.library-item__is-selected {
+    background-color: yellow;
+}
+
+.library-item__add-item-container {
+    border-top: 1px solid lightgray;
+    padding: 17px 0;
+    &:hover {
+        cursor: pointer;
+        background-color: orange;
+    }
+}
+
+.library-item__add-item {
+    font-size: 18px;
+}
+
+.class {
+    margin:20px;
+    &:hover {
+        color:yellow;
+    }
+}
+
+.library-item__play-button {
+    height:58px;
+    margin-bottom: 13px;
+    &:hover {
+        cursor: pointer;
+        color: orange;
+    }
 }
