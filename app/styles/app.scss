@@ -81,6 +81,9 @@ th.wider {
 }
 
 .library-item__add-item-container {
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
     border-top: 1px solid lightgray;
     padding: 17px 0;
     &:hover {
@@ -95,6 +98,7 @@ th.wider {
 
 .class {
     margin:20px;
+
     &:hover {
         color:yellow;
     }
@@ -106,5 +110,17 @@ th.wider {
     &:hover {
         cursor: pointer;
         color: orange;
+    }
+}
+
+.panel-body {
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+
+    &:hover {
+        cursor: pointer;
+        background-color: gray;
+
     }
 }
