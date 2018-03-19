@@ -124,3 +124,15 @@ th.wider {
 
     }
 }
+
+.library-item__container {
+    &.col-md-4 {
+        margin-top: 15px;
+    }
+    height: 198px;
+
+}
+
+.btn-filter {
+    padding: 10px 5px;
+}

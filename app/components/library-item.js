@@ -3,40 +3,41 @@ import Component from '@ember/component';
 export default Component.extend({
 	playing: false,
 
-	actions: {
-		// The reason this is broken right now is that it is creating a new instance of 'vocals' each time the div is pressed, so it's not stopping when you press it a second time.
-		playSound () {
-			var vocals = new Howl({
-				src: ['/audio/example-beat.mp3'],
-				onend: function() {
-					console.log('hello>>');
-				}
-			}),
-				playing = this.get('playing');
+	init () {
+		this._super(...arguments);
 
+		var vocals = new Howl({
+			src: ['/audio/example-beat.mp3'],
+			onend: function() {
+				console.log('hello>>');
+			}
+		});
+
+		this.set('vocals', vocals);
+	},
+
+	actions: {
+		clickSound () {
+			var vocals = this.get('vocals');
 
 			// If it's playing, turn it off
 			// If it's off, turn it on
-			if (!playing) {
-				console.log('playing!');
+			if (!this.get('playing')) {
+				console.log('playing1!', this.get('playing'));
 
 				this.set('playing', true);
 
+				console.log('playing2!', this.get('playing'));
 
 				vocals.play();
 			} else {
+				console.log('playing3!', this.get('playing'));
+
 				vocals.stop();
 
 				this.set('playing', false);
-				vocals.stop();
-
-				console.log('stopping!');
+				console.log('playing4!', this.get('playing'));
 			}
-			//
-			//
-			// // Switch 'playing' property
-			// this.set('playing', !this.get('playing'));
-			// console.log('playing2?', this.get('playing'));
 		}
 	}
 });
