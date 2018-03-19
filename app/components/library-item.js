@@ -1,17 +1,17 @@
 import Component from '@ember/component';
+// import { computed } from '@ember/object';
+// import { observer } from '@ember/object';
 
 export default Component.extend({
 	playing: false,
 
-	init () {
+	didReceiveAttrs () {
 		this._super(...arguments);
 
-		var vocals = new Howl({
-			src: ['/audio/example-beat.mp3'],
-			onend: function() {
-				console.log('hello>>');
-			}
-		});
+		var locationString = this.get('item.audioLocation'),
+			vocals = new Howl({
+				src: ['/' + locationString]
+			});
 
 		this.set('vocals', vocals);
 	},
@@ -23,20 +23,13 @@ export default Component.extend({
 			// If it's playing, turn it off
 			// If it's off, turn it on
 			if (!this.get('playing')) {
-				console.log('playing1!', this.get('playing'));
-
 				this.set('playing', true);
-
-				console.log('playing2!', this.get('playing'));
 
 				vocals.play();
 			} else {
-				console.log('playing3!', this.get('playing'));
-
 				vocals.stop();
 
 				this.set('playing', false);
-				console.log('playing4!', this.get('playing'));
 			}
 		}
 	}
