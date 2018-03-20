@@ -121,7 +121,9 @@ th.wider {
     &:hover {
         cursor: pointer;
         background-color: gray;
-
+        .play-button {
+            display: block;
+        }
     }
 }
 
@@ -135,4 +137,16 @@ th.wider {
 
 .btn-filter {
     padding: 10px 5px;
+}
+
+.play-button {
+    height: 45px;
+    position: absolute;
+    left: 34px;
+    top: 30%;
+    display: none;
+    opacity: 0.3;
+    -webkit-transition: display 200ms linear;
+    -ms-transition: display 200ms linear;
+    transition: display 200ms linear;
 }
