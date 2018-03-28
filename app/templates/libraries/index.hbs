@@ -26,7 +26,7 @@
 <div class="row">
   {{#each filteredList as |library|}}
     <div class="col-md-4 library-item__container">
-      {{library-item item=library badge=library.books.length}}
+      {{library-item item=library badge=library.books.length addSound=(action 'addSound')}}
     </div>
   {{else}}
     {{#if model.isUpdating}}

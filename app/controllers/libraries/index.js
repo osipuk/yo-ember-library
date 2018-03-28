@@ -31,8 +31,10 @@ export default Controller.extend({
 }),
 
 	actions: {
-		addSound (src) {
-			sources.push(src);
+		addSound (vocals) {
+			// this.get('sources').push(src);
+			this.get('sources').push(vocals._src);
+			console.log('sources:::', this.get('sources'));
 		}
 	}
 });
