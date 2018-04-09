@@ -10,7 +10,8 @@ export default Controller.extend({
 	letter: '',
 	limit: 'all',
 	sources: [],
-
+	ts:[],
+ 	sts:'',
 	limitAll: equal('limit', 'all'),
 
 	filteredList: computed('model.@each.name', 'filter', function() {
@@ -31,19 +32,21 @@ export default Controller.extend({
 		return results.sortBy('name');
 	}),
 
-	displaySourcesCopy: computed('sources.[]', function() {
-		var sources = this.get('sources');
-
+	displaySourcesCopy: computed('sts', function() {
+		var sources =[];
+			sources = this.get('sources');
 		console.log('de sources@ ', sources);
+		return Ember.String.loc(sources); //htmlSafec //loc
 
-		return htmlSafe(sources);
 	}),
 
 
 	actions: {
 		addSound (vocals) {
 			// this.get('sources').push(src);
-			this.get('sources').push(vocals._src);
+			this.get('ts').push(vocals._src);
+			this.set('sources',this.get('ts'));
+			this.set('sts',vocals._src);
 			console.log('sources:::', this.get('sources'));
 		}
 	}

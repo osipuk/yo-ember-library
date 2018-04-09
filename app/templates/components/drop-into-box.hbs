@@ -1,13 +1,19 @@
+
 <div class="drop-into-box__container">
-    asfadsf
-    {{sources}}
-    {{#each sources as |src|}}
+    sources
+   {{#each sources as |src|}}
+     {{src}}
+   {{/each}}
+    <!--
+	 {{sources}}
+	{{#each sources as |src|}}
       <div class="col-md-4 library-item__container">
         <div class="col-md-12 text-center">
           <div class="alert alert-info">
-            src
+            {{src}}
           </div>
         </div>
       </div>
     {{/each}}
+	-->
 </div>

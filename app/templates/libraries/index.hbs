@@ -1,7 +1,10 @@
-{{drop-into-box sources=sources}}
 
-displaySourcesCopy: {{{displaySourcesCopy}}}
+{{drop-into-box sources=displaySourcesCopy}}
 
+displaySourcesCopy:
+{{#each displaySourcesCopy as |item|}}
+  {{item}}
+{{/each}}
 <h2>List</h2>
 
 <div class="row">
