@@ -167,3 +167,19 @@ th.wider {
   left: auto;
   top: auto;
 }
+
+.drop-into-box__wrapper {
+  position: relative;
+}
+
+.export__container {
+  top: 90px;
+  position: absolute;
+  left: calc(50% + 120px);
+  font-size: 18px;
+  border: 1px solid black;
+  padding: 9px;
+  &:hover {
+      cursor: pointer;
+  }
+}

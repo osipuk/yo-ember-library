@@ -1,6 +1,8 @@
 import Component from '@ember/component';
 
 export default Component.extend({
+	classNames: ['drop-into-box__wrapper'],
+
 	vocalsWithHowl: [],
 
 	didReceiveAttrs () {
