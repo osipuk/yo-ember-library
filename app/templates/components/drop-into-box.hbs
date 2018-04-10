@@ -1,19 +1,13 @@
 
 <div class="drop-into-box__container">
-    sources
-   {{#each sources as |src|}}
-     {{src}}
-   {{/each}}
-    <!--
-	 {{sources}}
-	{{#each sources as |src|}}
-      <div class="col-md-4 library-item__container">
-        <div class="col-md-12 text-center">
-          <div class="alert alert-info">
-            {{src}}
-          </div>
-        </div>
-      </div>
-    {{/each}}
-	-->
+  {{#if soundIsAdded}}
+    <div class="drop-into-box__play-container" {{action 'clickNewMix'}}>
+      <img src="/images/play-button.png" class="play-button play-button--drop-box">
+    </div>
+  {{/if}}
+
+  <p>sources:</p>
+ {{#each sources as |src|}}
+   {{src}}
+ {{/each}}
 </div>

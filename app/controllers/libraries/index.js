@@ -13,6 +13,7 @@ export default Controller.extend({
 	ts:[],
  	sts:'',
 	limitAll: equal('limit', 'all'),
+	soundIsAdded: false,
 
 	filteredList: computed('model.@each.name', 'filter', function() {
 
@@ -43,6 +44,7 @@ export default Controller.extend({
 
 	actions: {
 		addSound (vocals) {
+			this.set('soundIsAdded', true);
 			// this.get('sources').push(src);
 			this.get('ts').push(vocals._src);
 			this.set('sources',this.get('ts'));
