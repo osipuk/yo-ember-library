@@ -65,7 +65,7 @@ th.wider {
 }
 
 .drop-into-box__container {
-    background-color: gray;
+    background-color: dodgerblue;
     height: 200px;
     width: 200px;
     margin: 0 auto;
@@ -100,6 +100,11 @@ th.wider {
         cursor: pointer;
         background-color: orange;
     }
+}
+
+.library-item__add-item-container--disabled {
+  pointer-events: none;
+  background-color: gray;
 }
 
 .library-item__add-item {

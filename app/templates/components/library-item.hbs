@@ -10,7 +10,7 @@
 			<p>{{item.audioLocation}}</p>
 		</div>
 	</div>
-	<div class="library-item__add-item-container">
-		<p class="library-item__add-item" {{action addSound vocals}}>Add sound</p>
+	<div class="library-item__add-item-container{{if isDisabled  ' library-item__add-item-container--disabled'}}" {{action addSound vocals}} {{action 'toggleDisable'}}>
+		<p class="library-item__add-item">Add sound</p>
 	</div>
 </div>

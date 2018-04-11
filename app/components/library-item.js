@@ -1,9 +1,8 @@
 import Component from '@ember/component';
-// import { computed } from '@ember/object';
-// import { observer } from '@ember/object';
 
 export default Component.extend({
 	playing: false,
+	isDisabled: false,
 
 	didReceiveAttrs () {
 		this._super(...arguments);
@@ -31,6 +30,10 @@ export default Component.extend({
 
 				this.set('playing', false);
 			}
+		},
+
+		toggleDisable () {
+			this.set('isDisabled', true);
 		}
 	}
 });
