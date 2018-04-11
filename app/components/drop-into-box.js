@@ -24,9 +24,20 @@ export default Component.extend({
 		clickNewMix () {
 			var vocalsWithHowl = this.get('vocalsWithHowl');
 
-			_.forEach(vocalsWithHowl, function(sound) {
-				sound.play();
-			});
+			if (!this.get('playing')) {
+				this.set('playing', true);
+
+				_.forEach(vocalsWithHowl, function(sound) {
+					sound.play();
+				});
+			} else {
+				_.forEach(vocalsWithHowl, function(sound) {
+					sound.stop();
+				});
+
+				this.set('playing', false);
+			}
+
 		}
 	}
 });
