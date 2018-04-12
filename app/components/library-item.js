@@ -32,7 +32,7 @@ export default Component.extend({
 			}
 		},
 
-		toggleDisable () {
+		makeButtonDisabled () {
 			this.set('isDisabled', true);
 		}
 	}
