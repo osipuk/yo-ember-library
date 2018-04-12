@@ -60,25 +60,31 @@ th.wider {
 }
 
 .btn__add-author {
-    background-color: yellow;
+    background-color: #FA903B;
     border: 1px solid black;
 }
 
 .drop-into-box__container {
-    background-color: dodgerblue;
+    background-color: #1A84FB;
     height: 200px;
     width: 200px;
-    margin: 0 auto;
+    margin: 35px auto;
+    text-align: center;
 }
 
 .drop-into-box__play-container {
   display: flex;
   justify-content: center;
-  background-color: dodgerblue;
+  background-color: #1A84FB;
   padding: 10px 0;
+  border-bottom: 1px solid black;
+  -webkit-transition: background-color 140ms linear;
+  -ms-transition: background-color 140ms linear;
+  transition: background-color 140ms linear;
 
   &:hover {
     cursor: pointer;
+    background-color: #FA903B;
   }
 }
 .drop-into-box__title {
@@ -87,24 +93,24 @@ th.wider {
 }
 
 .library-item__is-selected {
-    background-color: yellow;
+    background-color: #FA903B;
 }
 
 .library-item__add-item-container {
     -webkit-transition: background-color 200ms linear;
     -ms-transition: background-color 200ms linear;
     transition: background-color 200ms linear;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid light#9d9d9d;
     padding: 17px 0;
     &:hover {
         cursor: pointer;
-        background-color: orange;
+        background-color: lightgray;
     }
 }
 
 .library-item__add-item-container--disabled {
   pointer-events: none;
-  background-color: gray;
+  background-color: #9d9d9d;
 }
 
 .library-item__add-item {
@@ -115,7 +121,7 @@ th.wider {
     margin:20px;
 
     &:hover {
-        color:yellow;
+        color:#FA903B;
     }
 }
 
@@ -124,7 +130,7 @@ th.wider {
     margin-bottom: 13px;
     &:hover {
         cursor: pointer;
-        color: orange;
+        color: lightgray;
     }
 }
 
@@ -132,10 +138,11 @@ th.wider {
     -webkit-transition: background-color 200ms linear;
     -ms-transition: background-color 200ms linear;
     transition: background-color 200ms linear;
+    border-bottom: 1px solid lightgray;
 
     &:hover {
         cursor: pointer;
-        background-color: gray;
+        background-color: lightgray;
         .play-button {
             display: block;
         }
@@ -187,4 +194,23 @@ th.wider {
   &:hover {
       cursor: pointer;
   }
+}
+
+.logo-image {
+  height: 60px;
+  display: block;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.dropsong-blue {
+  background-color: #1A84FB !important;
+}
+
+.dropsong-orange {
+  background-color: #FA903B !important;
+}
+
+.source-name {
+  padding: 5px 0 0;
 }
