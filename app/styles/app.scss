@@ -67,7 +67,7 @@ th.wider {
 .drop-into-box__container {
     background-color: #1A84FB;
     height: 200px;
-    width: 200px;
+    width: 195px;
     margin: 35px auto 20px;
     text-align: center;
     border: 1px solid black;
@@ -110,8 +110,7 @@ th.wider {
 }
 
 .library-item__add-item-container--disabled {
-  pointer-events: none;
-  background-color: #9d9d9d;
+  display: none;
 }
 
 .library-item__remove-item-container--hide {
@@ -190,7 +189,7 @@ th.wider {
 }
 
 .export__container {
-  width: 200px;
+  width: 195px;
   text-align: center;
   margin: 0 auto 20px;
   font-size: 22px;
