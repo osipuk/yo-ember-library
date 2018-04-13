@@ -13,7 +13,7 @@
 	<div class="library-item__add-item-container{{if isDisabled  ' library-item__add-item-container--disabled'}}" {{action addSound vocals}} {{action 'makeButtonDisabled'}}>
 		<p class="library-item__add-item">Add sound</p>
 	</div>
-	<div class="library-item__add-item-container{{unless isDisabled  ' library-item__remove-item-container--hide'}}">
+	<div class="library-item__add-item-container{{unless isDisabled  ' library-item__remove-item-container--hide'}}"{{action removeSound vocals}} {{action 'makeButtonActive'}}>
 		<p class="library-item__add-item">Remove sound</p>
 	</div>
 </div>

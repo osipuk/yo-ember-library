@@ -1,6 +1,11 @@
 
 {{drop-into-box sources=displaySourcesCopy showPlayButton=showPlayButton}}
 
+displaySourcesCopy:
+{{#each displaySourcesCopy as |item|}}
+  {{item}}
+{{/each}}
+
 {{#if showPlayButton}}
   <p class="export__container">export mix</p>
 {{/if}}
@@ -29,7 +34,7 @@
 <div class="row">
   {{#each filteredList as |library|}}
     <div class="col-md-4 library-item__container">
-      {{library-item item=library badge=library.books.length addSound=(action 'addSound')}}
+      {{library-item item=library badge=library.books.length addSound=(action 'addSound') removeSound=(action 'removeSound')}}
     </div>
   {{else}}
     {{#if model.isUpdating}}

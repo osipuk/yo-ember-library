@@ -34,6 +34,10 @@ export default Component.extend({
 
 		makeButtonDisabled () {
 			this.set('isDisabled', true);
+		},
+
+		makeButtonActive () {
+			this.set('isDisabled', false);
 		}
 	}
 });

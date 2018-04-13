@@ -52,6 +52,21 @@ export default Controller.extend({
 			this.set('sources',this.get('ts'));
 			this.set('sts',vocals._src);
 			console.log('sources:::', this.get('sources'));
+		},
+
+		removeSound (vocals) {
+			var index = this.get('ts').indexOf(vocals._src);
+			console.log('ts1:::', this.get('sources'));
+
+			if (this.get('ts').length > 1) {
+				this.get('ts').splice(index, 1);
+			} else {
+				this.set('ts', []);
+			}
+			console.log('ts2:::', this.get('sources'));
+			this.set('sources',this.get('ts'));
+			this.set('sts',vocals._src);
+			console.log('sources:::', this.get('sources'));
 		}
 	}
 });
