@@ -13,7 +13,6 @@ export default Controller.extend({
 	ts:[],
  	sts:'',
 	limitAll: equal('limit', 'all'),
-	soundIsAdded: false,
 
 	filteredList: computed('model.@each.name', 'filter', function() {
 
@@ -38,14 +37,17 @@ export default Controller.extend({
 			sources = this.get('sources');
 		console.log('de sources@ ', sources);
 		return Ember.String.loc(sources); //htmlSafec //loc
-
 	}),
 
+	showPlayButton: computed('sts', function() {
+		var sources =[];
+			sources = this.get('sources');
+		console.log('de sources@.lenth', sources.length);
+		return sources.length > 0; //htmlSafec //loc
+	}),
 
 	actions: {
 		addSound (vocals) {
-			this.set('soundIsAdded', true);
-			// this.get('sources').push(src);
 			this.get('ts').push(vocals._src);
 			this.set('sources',this.get('ts'));
 			this.set('sts',vocals._src);

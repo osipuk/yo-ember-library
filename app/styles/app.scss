@@ -68,14 +68,15 @@ th.wider {
     background-color: #1A84FB;
     height: 200px;
     width: 200px;
-    margin: 35px auto;
+    margin: 35px auto 20px;
     text-align: center;
+    border: 1px solid black;
 }
 
 .drop-into-box__play-container {
   display: flex;
   justify-content: center;
-  background-color: #1A84FB;
+  background-color: #ddd;
   padding: 10px 0;
   border-bottom: 1px solid black;
   -webkit-transition: background-color 140ms linear;
@@ -84,7 +85,7 @@ th.wider {
 
   &:hover {
     cursor: pointer;
-    background-color: #FA903B;
+    background-color: lightgray;
   }
 }
 .drop-into-box__title {
@@ -189,15 +190,23 @@ th.wider {
 }
 
 .export__container {
-  top: 90px;
-  position: absolute;
-  left: calc(50% + 120px);
-  font-size: 18px;
+  width: 200px;
+  text-align: center;
+  margin: 0 auto 20px;
+  font-size: 22px;
   border: 1px solid black;
-  padding: 9px;
+  padding: 13px;
+  -webkit-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
   &:hover {
+      background-color: #FA903B;
       cursor: pointer;
   }
+}
+
+.export__container--empty {
+  left: calc(50% - 224px);
 }
 
 .logo-image {

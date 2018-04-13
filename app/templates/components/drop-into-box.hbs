@@ -1,11 +1,5 @@
-{{#if soundIsAdded}}
-  <p class="export__container">
-    export sound
-  </p>
-{{/if}}
-
 <div class="drop-into-box__container">
-  {{#if soundIsAdded}}
+  {{#if showPlayButton}}
     <div class="drop-into-box__play-container" {{action 'clickNewMix'}}>
       <img src="/images/play-button.png" class="play-button play-button--drop-box">
     </div>
